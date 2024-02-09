@@ -17,6 +17,12 @@ class MyPath:
         self.is_file = self.path.is_file()
         self.is_dir = self.path.is_dir()
 
+    def __str__(self):
+        """
+        Возвращает абсолютный путь к файлу
+        """
+        return str(self.path.absolute())
+
     def read_file(self):
         """
         Чтение текста из файла
